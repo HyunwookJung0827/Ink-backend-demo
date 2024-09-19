@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from .views import test_nocodb, handle_typebot_request
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('test-nocodb/', test_nocodb, name='test_nocodb'),
+    path('handle-typebot-request/', handle_typebot_request, name='handle_typebot_request'),
 ]
